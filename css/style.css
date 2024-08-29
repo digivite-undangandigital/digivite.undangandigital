@@ -1,0 +1,24 @@
+@import 'global.css';
+@import 'responsive.css';
+@import 'header.css';
+@import 'homepage.css';
+@import 'animasi.css';
+@import 'master-css.css';
+
+/* Style Per Katalog */
+@import 'style-undangan-1.css';
+
+.page {
+  margin: 0 !important;
+}
+
+.page-container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.digivite-body {
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: var(--color-background);
+}
