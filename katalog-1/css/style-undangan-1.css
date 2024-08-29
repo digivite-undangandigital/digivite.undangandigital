@@ -4,7 +4,7 @@ html {
 
 .modul-tutup-undangan .modul-ganti-background,
 .elementor-17072 .modul-isi--ganti-bg-footer:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
-    background-image: url("/img/katalog-1.webp") !important;
+    background-image: url("/digivite.undangandigital/img/katalog-1.webp") !important;
 }
 
 .font-lora {
@@ -45,15 +45,15 @@ html {
 }
 
 .elementor-17072 .modul-isi--wrapper-mempelai-wanita:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
-    background-image: url("/img/mempelai-wanita-1.png") !important;
+    background-image: url("/digivite.undangandigital/img/mempelai-wanita-1.png") !important;
 }
 
 .elementor-17072 .modul-isi--wrapper-mempelai-pria:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
-    background-image: url("/img/mempelai-pria.png") !important;
+    background-image: url("/digivite.undangandigital/img/mempelai-pria.png") !important;
 }
 
 .modul-isi--ganti-background .modul-ganti-background {
-    background-image: url("/img/katalog-1-view-2.webp") !important;
+    background-image: url("/digivite.undangandigital/img/katalog-1-view-2.webp") !important;
 }
 
 .modul-footer--ganti-background {
@@ -89,7 +89,7 @@ html {
 }
 
 .modul-isi--ganti-photo-love-story .modul-isi--wrapper-ganti-photo-love-story {
-    background-image: url("/img/katalog-1-view-4.jpeg") !important;
+    background-image: url("/digivite.undangandigital/img/katalog-1-view-4.jpeg") !important;
 }
 
 .modul-isi--ganti-bg-galeri:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
