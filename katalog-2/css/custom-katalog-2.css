@@ -130,7 +130,7 @@ p,
 }
 
 .modul-footer {
-    background-color: #CAF0F8 !important;
+    /* background-color: #CAF0F8 !important; */
     inset-inline-start: 0px !important;
     width: 100% !important;
 }
