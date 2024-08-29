@@ -1,9 +1,9 @@
-@import 'global.css';
-@import 'responsive.css';
-@import 'header.css';
-@import 'homepage.css';
-@import 'animasi.css';
-@import 'master-css.css';
+@import 'css/global.css';
+@import 'css/responsive.css';
+@import 'css/header.css';
+@import 'css/homepage.css';
+@import 'css/animasi.css';
+@import 'css/master-css.css';
 
 /* Style Per Katalog */
 @import 'style-undangan-1.css';
