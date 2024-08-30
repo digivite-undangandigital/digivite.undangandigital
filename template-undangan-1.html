@@ -3702,6 +3702,17 @@
                 // Send the request
                 xhr.send();
             });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get the page title
+                var pageTitle = document.title;
+
+                // Find the div with class 'the-title'
+                var titleDiv = document.querySelector('.the-title');
+
+                // Set the text content of the div to the page title
+                titleDiv.textContent = pageTitle;
+            });
         </script>
     </div>
     <link rel='stylesheet' id='elementor-gallery-css'
