@@ -3704,8 +3704,16 @@
             });
 
             document.addEventListener('DOMContentLoaded', function () {
+                // Get the page title
                 var pageTitle = document.title;
-                console.log("Page Title nya adalah = " + pageTitle);
+
+                // Find the div with class 'the-title'
+                var titleDiv = document.querySelector('.the-title');
+
+                // Set the text content of the div to the page title
+                titleDiv.textContent = pageTitle;
+
+                console.log("Page Titlenya adalah" + pageTitle);
             });
         </script>
     </div>
