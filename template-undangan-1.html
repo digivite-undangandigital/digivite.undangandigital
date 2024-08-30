@@ -3672,8 +3672,33 @@
         </section>
         <!-- Footer  -->
         <div class="footer-wrapper"></div>
+        <!-- Call footer-template.html as a global item -->
         <script>
-            $('.footer-wrapper').load('footer-template.html');
+            document.addEventListener('DOMContentLoaded', function () {
+                // Create a new XMLHttpRequest object
+                var xhr = new XMLHttpRequest();
+
+                // Specify the type of request, URL, and whether the request should be asynchronous
+                xhr.open('GET', 'footer-template.html', true);
+
+                // Define what happens on successful data submission
+                xhr.onload = function () {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // Insert the loaded content into the div
+                        document.querySelector('.footer-wrapper').innerHTML = xhr.responseText;
+                    } else {
+                        console.error('The request failed with status:', xhr.status);
+                    }
+                };
+
+                // Define what happens in case of an error
+                xhr.onerror = function () {
+                    console.error('There was a network error.');
+                };
+
+                // Send the request
+                xhr.send();
+            });
         </script>
     </div>
     <link rel='stylesheet' id='elementor-gallery-css'

@@ -1,5 +1,5 @@
 <section
-    class="elementor-section elementor-top-section elementor-element elementor-element-1c4e067 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    class="global-footer elementor-section elementor-top-section elementor-element elementor-element-1c4e067 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="1c4e067" data-element_type="section"
     data-settings="{&quot;sticky&quot;:&quot;bottom&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
     <div class="elementor-container elementor-column-gap-default">
@@ -76,8 +76,14 @@
     </div>
 </section>
 <script>
-    $(document).ready(function () {
-        var pageTitle = $(document).prop('title');
-        $('.the-title').text(pageTitle);
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the page title
+        var pageTitle = document.title;
+
+        // Find the div with class 'the-title'
+        var titleDiv = document.querySelector('.the-title');
+
+        // Set the text content of the div to the page title
+        titleDiv.textContent = pageTitle;
     });
 </script>
