@@ -3702,7 +3702,9 @@
                 // Send the request
                 xhr.send();
             });
+        </script>
 
+        <script>
             document.addEventListener('DOMContentLoaded', function () {
                 // Get the page title
                 var pageTitle = document.title;
@@ -3710,10 +3712,16 @@
                 // Find the div with class 'the-title'
                 var titleDiv = document.querySelector('.the-title');
 
-                // Set the text content of the div to the page title
-                titleDiv.textContent = pageTitle;
+                if (titleDiv) {
+                    // Set the text content of the div to the page title
+                    titleDiv.textContent = pageTitle;
 
-                console.log("Page Titlenya adalah" + pageTitle);
+                    // Log the page title to the console
+                    console.log("Page Titlenya adalah " + pageTitle);
+                } else {
+                    // Log an error if the div is not found
+                    console.error("Element with class 'the-title' not found.");
+                }
             });
         </script>
     </div>
