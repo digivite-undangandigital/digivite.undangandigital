@@ -1,3 +1,7 @@
+.section-banner-home .container {
+    padding: 0px !important;
+}
+
 .section-banner-home .border-line {
     left: 50%;
     right: 50%;
@@ -17,6 +21,15 @@
     background-color: rgb(160 164 142 / 50%);
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.section-banner-home .banner-image-wrapper {
+    /* padding-bottom: 50px; */
+}
+
+.section-banner-home .banner-image-wrapper img {
+    object-fit: contain;
+    height: 400px;
 }
 
 .section-banner-home .content-wrapper {
@@ -46,4 +59,55 @@
     position: absolute;
     left: 25%;
     top: 45%;
+}
+
+/* Section Pilihan Tema  */
+.section-katalog .pilihan-tema-wrapper {
+    gap: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.section-katalog .card-tema-wrapper {
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* .section-katalog .card-tema-wrapper .card-photo{
+    overflow: hidden;
+} */
+
+.section-katalog .card-tema-wrapper .card-photo,
+.section-katalog .card-tema-wrapper .card-content {
+    padding-bottom: 10px;
+}
+
+/* 
+.section-katalog .card-tema-wrapper .card-photo .image-wrapper,
+.section-katalog .card-tema-wrapper:hover .card-photo .image-wrapper{
+    transition: all .3s ease;
+}
+
+.section-katalog .card-tema-wrapper:hover .card-photo .image-wrapper{
+    transform: scale(1.2); 
+}*/
+
+.section-katalog .card-tema-wrapper .card-content {
+    font-family: var(--font-accent);
+    font-size: 16px;
+}
+
+.section-katalog .card-tema-wrapper .card-content .card-price {
+    font-weight: 600;
+}
+
+.section-katalog .card-tema-wrapper .card-tombol {
+    background: var(--color-accent);
+    text-align: center;
+    border-radius: 50px;
+    font-weight: bold;
+    color: var(--color-white);
+    padding: 5px 0px;
+    font-size: 16px;
 }

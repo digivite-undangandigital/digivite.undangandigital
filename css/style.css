@@ -23,10 +23,82 @@
   background-color: var(--color-background);
 }
 
+/* Global Footer for template */
 .modul-footer--ganti-background {
   background-color: #a0a48e !important;
 }
 
+.digivite-global-class .elementor-element.elementor-element-1c4e067>.elementor-container {
+  max-width: 450px;
+}
+
+.digivite-global-class .elementor-element.elementor-element-e48d946>.elementor-element-populated {
+  padding: 0px 0px 0px 0px;
+}
+
+.digivite-global-class .elementor-element.elementor-element-19d7d1c {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.digivite-global-class .elementor-element.elementor-element-f374621.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated {
+  align-content: center;
+  align-items: center;
+}
+
+.digivite-global-class .elementor-element.elementor-element-b068c0b.elementor-view-default .elementor-icon {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  font-size: 24px;
+}
+
+.digivite-global-class .elementor-element.elementor-element-ca28949 .elementor-headline-dynamic-text {
+  font-family: "Roboto", Sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.digivite-global-class .elementor-element.elementor-element-7ba53f0 .elementor-button {
+  font-family: "Poppins", Sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 20px 20px 20px 20px;
+  padding: 9px 9px 9px 9px;
+}
+
+.digivite-global-class .global-footer .elementor-container.elementor-column-gap-default {
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.digivite-global-class .global-footer .elementor-headline {
+  font-size: 0;
+  margin: 0;
+}
+
 .global-footer .elementor-button {
   background-image: linear-gradient(180deg, #545748 0%, #545748 100%) !important
+}
+
+@media (min-width: 768px) {
+
+
+  .digivite-global-class .elementor-element.elementor-element-f374621,
+  .elementor-17072 .elementor-element.elementor-element-ac9cdca {
+    width: 25%;
+  }
+
+  .digivite-global-class .elementor-element.elementor-element-351b46e {
+    width: 49.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+  .digivite-body {
+    max-width: 100%;
+  }
 }
