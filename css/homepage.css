@@ -23,8 +23,9 @@
     margin-bottom: 50px;
 }
 
-.section-banner-home .banner-image-wrapper {
-    /* padding-bottom: 50px; */
+.section-banner-home .banner-image-wrapper .image-wrapper {
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
 }
 
 .section-banner-home .banner-image-wrapper img {
@@ -110,4 +111,21 @@
     color: var(--color-white);
     padding: 5px 0px;
     font-size: 16px;
+}
+
+@keyframes float {
+    0% {
+
+        transform: translatey(0px);
+    }
+
+    50% {
+
+        transform: translatey(-20px);
+    }
+
+    100% {
+
+        transform: translatey(0px);
+    }
 }
