@@ -1,0 +1,177 @@
+.color-dark-green {
+    color: #3A5A40 !important;
+}
+
+.color-green {
+    color: #588157 !important;
+}
+
+.color-light-green {
+    color: #A3B18A !important;
+}
+
+.color-light {
+    color: #DAD7CD !important;
+}
+
+.color-dark {
+    color: #344E41 !important;
+}
+
+.bg-dark-green {
+    background: #3A5A40 !important;
+}
+
+.bg-light-green {
+    background: #A3B18A !important;
+}
+
+.bg-light {
+    background: #DAD7CD !important;
+}
+
+.bg-dark {
+    background: #344E41 !important;
+}
+
+h2,
+.font-lora {
+    font-family: "Lora", serif !important;
+}
+
+div,
+span,
+p,
+.font-poppins {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-6297b7c7:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-view-1.jpeg") !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-16ba42b3:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-71c82f3e:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-11b7117c:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-7c2431bd:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-bg-1-ijo.jpg") !important;
+}
+
+.digivite-tema-4 .modul-isi-btn-green .elementor-button {
+    background-image: linear-gradient(180deg, #3A5A40 0%, #3A5A40 100%) !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-295c470d>.elementor-element-populated>.elementor-background-overlay {
+    background-image: linear-gradient(180deg, #F9ECE300 58%, #A3B18A 96%) !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-295c470d:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-view-2.jpeg") !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-3d92951f:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-9b5cea2>.elementor-element-populated>.elementor-background-overlay,
+.elementor-8953 .elementor-element.elementor-element-77d0a318:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-4295fa25:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-bg-2-ijo.jpg") !important;
+    background-color: #A3B18A !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-98a8ed6:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-60a42198 .elementor-social-icon,
+.elementor-8953 .elementor-element.elementor-element-fcb8e5f:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-72bc8304 .elementor-social-icon,
+.elementor-8953 .elementor-element.elementor-element-9695ac2:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-23a474eb:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-7b4c7d6d:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-4b80fba1:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-3b299a62:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-color: #3A5A40 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-90473a4>.elementor-shape-bottom .elementor-shape-fill,
+.elementor-8953 .elementor-element.elementor-element-2a7393b0>.elementor-shape-top .elementor-shape-fill,
+.elementor-8953 .elementor-element.elementor-element-30969598>.elementor-shape-top .elementor-shape-fill,
+.elementor-8953 .elementor-element.elementor-element-20afed8a>.elementor-shape-bottom .elementor-shape-fill,
+.elementor-8953 .elementor-element.elementor-element-733617c5>.elementor-shape-top .elementor-shape-fill,
+.elementor-8953 .elementor-element.elementor-element-60d9019f>.elementor-shape-bottom .elementor-shape-fill {
+    fill: #3A5A40 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-6c4d98a3:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.elementor-8953 .elementor-element.elementor-element-457815f8:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-bg-3-ijo.jpg") !important;
+    background-color: #A3B18A !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-57738920:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-mempelai-wanita.jpeg") !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-2ef030bc:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-mempelai-pria.jpeg") !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-72bc8304 .elementor-social-icon:hover {
+    background-color: #344E41 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-1dbd7506>.elementor-widget-container {
+    border-color: #3A5A40 !important;
+    background-color: #A3B18A !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-58dc765d>.elementor-widget-container,
+.elementor-8953 .elementor-element.elementor-element-72acdfcc>.elementor-widget-container {
+    background-color: #3A5A40 !important;
+    box-shadow: 0px 6px 5px 0px #344E41 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-13bd85d5:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-view-3.jpeg") !important;
+}
+
+.elementor-widget-divider:not(.elementor-widget-divider--view-line_text):not(.elementor-widget-divider--view-line_icon) .elementor-divider-separator {
+    border-top-color: #3A5A40 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-d46cfa0 .wpkoi-elements-countdown-item>div {
+    background: #3A5A40 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-5e2a0bda:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-color: #A3B18A !important;
+    background-image: unset !important;
+}
+
+.cui-wrapper.cui-facebook .cui-wrap-form .cui-container-form input[type="submit"],
+.cui-wrapper.cui-facebook .cui-wrap-form .cui-container-form input[type="submit"] {
+    background: #3A5A40 !important;
+}
+
+.elementor-widget-weddingpress-kit2 .cui-wrapper .cui-wrap-form .cui-container-form input[type=text],
+.elementor-widget-weddingpress-kit2 .cui-wrapper .cui-wrap-form .cui-container-form textarea.cui-textarea {
+    color: #3A5A40 !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-e83cc38:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: url("/katalog-4/img/katalog-4-view-4.jpeg") !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-e83cc38>.elementor-element-populated>.elementor-background-overlay {
+    background-image: linear-gradient(180deg, #A3B18A 0%, #F9ECE300 49%) !important;
+}
+
+.elementor-8953 .elementor-element.elementor-element-1e44dd07:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+    background-image: linear-gradient(180deg, #F9ECE300 36%, #A3B18A 100%) !important;
+}
+
+/* Sticky */
+.elementor-8953 .elementor-element.elementor-element-2556ed9b:not(.elementor-motion-effects-element-type-background) {
+    background-color: #DAD7CD !important;
+    ;
+}
+
+.elementor-8953 .modul-sticky--button-item .elementor-social-icon {
+    background-color: #3A5A40 !important;
+}
