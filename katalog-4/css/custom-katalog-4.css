@@ -85,7 +85,8 @@ p,
 .digivite-tema-4 .elementor-element.elementor-element-23a474eb:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
 .digivite-tema-4 .elementor-element.elementor-element-7b4c7d6d:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
 .digivite-tema-4 .elementor-element.elementor-element-4b80fba1:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
-.digivite-tema-4 .elementor-element.elementor-element-3b299a62:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
+.digivite-tema-4 .elementor-element.elementor-element-3b299a62:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
+.digivite-tema-4 .elementor-element.elementor-element-120aa995:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap {
     background-color: #3A5A40 !important;
 }
 
@@ -169,9 +170,12 @@ p,
 /* Sticky */
 .digivite-tema-4 .elementor-element.elementor-element-2556ed9b:not(.elementor-motion-effects-element-type-background) {
     background-color: #DAD7CD !important;
-    ;
 }
 
 .digivite-tema-4 .modul-sticky--button-item .elementor-social-icon {
     background-color: #3A5A40 !important;
+}
+
+.digivite-tema-4 .elementor-element.elementor-element-3615079b>.elementor-shape-top .elementor-shape-fill {
+    fill: #A3B18A !important;
 }
