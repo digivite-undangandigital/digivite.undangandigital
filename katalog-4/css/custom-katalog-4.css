@@ -176,6 +176,7 @@ p,
     background-color: #3A5A40 !important;
 }
 
-.digivite-tema-4 .elementor-element.elementor-element-3615079b>.elementor-shape-top .elementor-shape-fill {
+.digivite-tema-4 .elementor-element.elementor-element-3615079b>.elementor-shape-top .elementor-shape-fill,
+.digivite-tema-4 .elementor-element.elementor-element-3615079b>.elementor-shape-bottom .elementor-shape-fill {
     fill: #A3B18A !important;
 }
