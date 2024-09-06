@@ -33,6 +33,13 @@
     height: 400px;
 }
 
+.section-banner-home .banner-image-wrapper .shadow-wrapper img {
+    height: 100px;
+    opacity: .6;
+    margin-top: -60px;
+    z-index: -1;
+}
+
 .section-banner-home .content-wrapper {
     text-align: center;
     width: 90%;
@@ -111,6 +118,15 @@
     color: var(--color-white);
     padding: 5px 0px;
     font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card-tombol svg {
+    height: 20px;
 }
 
 @keyframes float {
