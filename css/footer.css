@@ -1,3 +1,7 @@
+.section-home-footer .container {
+    padding: 30px 0px !important;
+}
+
 .section-home-footer .content-wrapper {
     grid-template-columns: repeat(5, max-content);
     justify-content: space-evenly;
