@@ -2,3 +2,13 @@
     grid-template-columns: repeat(5, max-content);
     justify-content: space-evenly;
 }
+
+.section-home-footer .section-title {
+    font-size: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.section-home-footer .copyright-wrapper {
+    padding-top: 30px;
+    text-align: center;
+}
