@@ -1,0 +1,4 @@
+.section-home-footer .content-wrapper {
+    grid-template-columns: repeat(5, max-content);
+    justify-content: space-evenly;
+}
