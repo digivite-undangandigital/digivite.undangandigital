@@ -35,10 +35,13 @@ body {
 
 .visible-hidden {
   visibility: hidden;
+  opacity: 0;
+  transition: all 3ms ease;
 }
 
 .visible {
   visibility: visible;
+  opacity: 1;
 }
 
 .position-relative {
