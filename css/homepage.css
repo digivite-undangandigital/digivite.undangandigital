@@ -156,6 +156,12 @@
 }
 
 /* Section Coming Soon */
+.content-home {
+    visibility: visible;
+    opacity: 1;
+    transition: all 3ms ease;
+}
+
 .page-coming-soon .content-wrapper {
     width: 80%;
     margin: 0 auto;
