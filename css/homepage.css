@@ -160,12 +160,16 @@
     visibility: visible;
     opacity: 1;
     transition: all 3ms ease;
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
 }
 
 .ditutup {
     visibility: hidden;
     opacity: 0;
     transition: all 3ms ease;
+    animation: 1s fadeIn;
+    animation-fill-mode: forwards;
 }
 
 .page-coming-soon .content-wrapper {
@@ -218,5 +222,15 @@
     100% {
 
         transform: translatey(0px);
+    }
+}
+
+@keyframes fadeIn {
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
     }
 }
