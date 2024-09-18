@@ -162,7 +162,7 @@
 <!-- End of Section Katalog -->
 
 <!-- Coming Soon -->
-<div class="page-coming-soon ditutup">
+<div class="page-coming-soon hidden">
     <section class="section-coming-soon">
         <div class="container w-90 mg-side-auto position-relative">
             <h3 class="section-title">
@@ -188,12 +188,12 @@
     feather.replace();
 
     function comingSoon() {
-        $('.page-coming-soon').removeClass('ditutup');
-        $('.content-home').addClass('ditutup');
+        $('.page-coming-soon').removeClass('hidden');
+        $('.content-home').addClass('hidden');
     }
 
     function backHome() {
-        $('.page-coming-soon').addClass('ditutup');
-        $('.content-home').removeClass('ditutup');
+        $('.page-coming-soon').addClass('hidden');
+        $('.content-home').removeClass('hidden');
     }
 </script>
