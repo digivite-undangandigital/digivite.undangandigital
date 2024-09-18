@@ -157,13 +157,37 @@
 
 /* Section Coming Soon */
 .page-coming-soon .content-wrapper {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
 }
 
 .page-coming-soon .section-content {
     padding-bottom: 30px;
+}
+
+.page-coming-soon .cta-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.page-coming-soon .cta-wrapper a {
+    border-radius: 20px;
+}
+
+.page-coming-soon .cta-wrapper .back-to-home {
+    border: 1px solid var(--color-black);
+    background: transparent;
+    color: var(--color-black);
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+.page-coming-soon .cta-wrapper .cta-hubungi {
+    background: var(--color-accent);
+    font-weight: bold;
+    color: var(--color-white);
+    padding: 5px 0px;
 }
 
 /* End of Section Coming Soon */
