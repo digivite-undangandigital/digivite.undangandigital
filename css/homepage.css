@@ -172,6 +172,13 @@
     animation-fill-mode: forwards;
 }
 
+.page-coming-soon .container {
+    height: calc(100vh - 313px);
+    padding: 0px;
+    display: grid;
+    align-content: center;
+}
+
 .page-coming-soon .content-wrapper {
     width: 80%;
     margin: 0 auto;
