@@ -1,5 +1,5 @@
 <!-- Banner Home -->
-<section class="section-banner-home">
+<section class="section-banner-home content-home">
     <div class="container w-90 mg-side-auto position-relative">
         <!-- <div class="border-line border-top position-relative"></div> -->
         <div class="banner-image-wrapper">
@@ -24,7 +24,7 @@
 <!-- End of Banner Home -->
 
 <!-- Section Katalog -->
-<section class="section-katalog">
+<section class="section-katalog content-home">
     <div class="container w-90 mg-side-auto position-relative">
         <div class="content-wrapper">
             <div class="banner-subtitle position-relative">Katalog
@@ -48,7 +48,7 @@
                         <div class="card-title">Lite Gold</div>
                         <div class="card-price">Rp 80.000</div>
                     </div>
-                    <a href="/">
+                    <a href="/" onclick="comingSoon()">
                         <div class="card-tombol">Lihat</div>
                     </a>
                 </div>
@@ -161,6 +161,39 @@
 </section>
 <!-- End of Section Katalog -->
 
+<!-- Coming Soon -->
+<div class="page-coming-soon hidden">
+    <section class="section-coming-soon">
+        <div class="container w-90 mg-side-auto position-relative">
+            <h3 class="section-title">
+                Coming Soon
+            </h3>
+            <div class="content-wrapper">
+                <div class="section-content">
+                    Halo, Kami sangat senang dan tidak sabar untuk membawa kabar gembira terbaru kami. <br>
+                    Tetaplah bersama kami, dan beri kami sedikit waktu untuk hal baru ini
+                </div>
+                <div class="cta-wrapper">
+                    <a href="/" onclick="backHome()" class="back-to-home">Kembali</a>
+                    <a href="https://wa.me/6289510223261?text=Halo%20Kak,%20saya%20baru%20saja%20melihat%20website%20Digivite%20dan%20ingin%20tau%20info%20lebih%20lanjutnya."
+                        class="cta-hubungi">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- End of Coming Soon -->
+
 <script>
     feather.replace();
+
+    function comingSoon() {
+        $('.page-coming-soon').removeClass('hidden');
+        $('.content-home').addClass('hidden');
+    }
+
+    function backHome() {
+        $('.page-coming-soon').addClass('hidden');
+        $('.content-home').removeClass('hidden');
+    }
 </script>
