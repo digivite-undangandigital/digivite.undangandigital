@@ -77,6 +77,10 @@
 
 /* Section Pilihan Tema  */
 /* Ribbon CSS */
+.card-flash-sale {
+    overflow: hidden;
+}
+
 .ribbon-flash-sale {
     background: red;
     color: white;
