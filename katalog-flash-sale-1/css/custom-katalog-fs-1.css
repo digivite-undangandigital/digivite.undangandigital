@@ -1,0 +1,53 @@
+.color-light {
+    color: #DAD7CD !important;
+}
+
+.color-coklat {
+    color: #270703 !important;
+}
+
+.color-dark {
+    color: #000000 !important;
+}
+
+.bg-light {
+    background: #FFFFFF !important;
+}
+
+.bg-dark {
+    background: #000000 !important;
+}
+
+h2,
+.font-lora {
+    font-family: "Lora", serif !important;
+}
+
+div,
+span,
+p {
+    font-family: "Lora", serif !important;
+}
+
+.elementor-21668 .elementor-element.elementor-element-73ead9ee:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-271bc9c:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-6d898ca8:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-6d84c0c1:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-335d6bbf:not(.elementor-motion-effects-element-type-background) {
+    background-image: url('/katalog-flash-sale-1/foto-mempelai.png') !important;
+}
+
+.elementor-21668 .elementor-element.elementor-element-73ead9ee:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-335d6bbf:not(.elementor-motion-effects-element-type-background) {
+    background-position: 110% 0px !important;
+    background-size: 150% !important;
+}
+
+.elementor-21668 .elementor-element.elementor-element-271bc9c:not(.elementor-motion-effects-element-type-background),
+.elementor-21668 .elementor-element.elementor-element-6d898ca8:not(.elementor-motion-effects-element-type-background) {
+    background-position: -70px 0px !important;
+}
+
+.elementor-21668 .elementor-element.elementor-element-6d84c0c1:not(.elementor-motion-effects-element-type-background) {
+    background-position: -90px -20px !important;
+}
