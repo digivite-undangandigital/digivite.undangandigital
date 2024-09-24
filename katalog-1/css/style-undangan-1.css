@@ -123,3 +123,8 @@ h2,
     inset-inline-start: unset !important;
     right: 27% !important;
 }
+
+.global-footer {
+    max-width: 450px;
+    margin: 0 auto;
+}
