@@ -134,4 +134,5 @@ h2,
     bottom: 0 !important;
     width: 100% !important;
     max-width: 450px !important;
+    z-index: 99999 !important;
 }
