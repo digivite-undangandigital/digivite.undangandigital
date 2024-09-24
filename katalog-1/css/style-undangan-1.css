@@ -128,3 +128,9 @@ h2,
     max-width: 450px;
     margin: 0 auto;
 }
+
+.global-footer .elementor-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
