@@ -118,3 +118,8 @@ h2,
 .elementor-17072 .elementor-element.elementor-element-3dbaea5a.elementor-view-stacked .elementor-icon {
     background-color: #272323 !important;
 }
+
+.elementor-element-3dbaea5a {
+    inset-inline-start: unset !important;
+    right: 27% !important;
+}
