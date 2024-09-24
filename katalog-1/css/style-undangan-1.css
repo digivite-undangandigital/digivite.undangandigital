@@ -129,8 +129,9 @@ h2,
     margin: 0 auto;
 }
 
-.global-footer .elementor-container {
+.global-footer .modul-footer--ganti-background {
     position: fixed !important;
     bottom: 0 !important;
     width: 100% !important;
+    max-width: 450px !important;
 }
