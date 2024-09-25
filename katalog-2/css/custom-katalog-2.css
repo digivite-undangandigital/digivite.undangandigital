@@ -128,7 +128,7 @@ p,
 .elementor-16458 .elementor-element.elementor-element-74a517ba.elementor-view-stacked .elementor-icon {
     color: #0077B6 !important;
     right: 30px !important;
-    position: absolute !important;
+    position: sticky !important;
 }
 
 .modul-footer {
