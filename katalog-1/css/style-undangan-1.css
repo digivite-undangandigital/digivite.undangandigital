@@ -121,7 +121,8 @@ h2,
 
 .elementor-element-3dbaea5a {
     inset-inline-start: unset !important;
-    right: 27% !important;
+    /* right: 27% !important; */
+    bottom: 100px !important;
 }
 
 .global-footer {
