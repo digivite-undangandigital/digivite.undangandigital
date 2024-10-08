@@ -35,18 +35,8 @@
 </div>
 <script>
     $(document).ready(function () {
-        // Fetch initial data on page load
-        $.ajax({
-            type: 'GET',
-            url: 'https://script.google.com/macros/s/AKfycbz52b-BEkatWf45nxB4hmKjByFHiPCbb1c46BYbBk5yESi6a05YWqcosuiYoUGukbLb/exec',
-            success: function (response) {
-                updateEntries(response.data);
-            },
-            error: function () {
-                console.error("Error fetching initial data.");
-            }
-        });
 
+        // Kirim Data ke Sheet
         $('#my-form').submit(function (e) {
             e.preventDefault();
             var form = $(this);
@@ -69,6 +59,7 @@
 
         });
 
+        // Buat notif submit success or not
         function showNotification(message, type) {
             var notification = $('<div class="notification"></div>');
             notification.text(message);
@@ -80,18 +71,49 @@
                 notification.remove();
             }, 5000); // Adjust timeout as needed
         }
+        // End of Kirim Data ke Sheet
 
-        function updateEntries(entries) {
-            $('#form-container').empty(); // Clear previous entries
-            entries.forEach(function (entry) {
-                $('#form-container').append(`<div class="entry">
-                    <strong>Name:</strong> ${entry[1]} <br>
-                    <strong>Phone:</strong> ${entry[2]} <br>
-                    <strong>Message:</strong> ${entry[3]} <br>
-                    <hr>
-                </div>`);
-            });
-        }
+        // Fetch data and show as csv
+        // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
+        const sheetId = "1L_c0OjjnFq8xARjuXqGKdnD4xy_p5Uix9ith_LZpz7o";
+        // sheetName is the name of the TAB in your spreadsheet (default is "Sheet1")
+        const sheetName = encodeURIComponent("Sheet1");
+        const sheetURL =
+            `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
+
+        $.ajax({
+            type: "GET",
+            url: sheetURL,
+            dataType: "text",
+            success: function (response) {
+                // var data = $.csv.toArrays(response);
+                var data = $.csv.toObjects(response);
+                console.log(data);
+                // 'data' is an Array of Objects
+                // ADD YOUR CODE HERE
+
+                // Build comment display
+                let html = '';
+                data.forEach(row => {
+                    // Extract Name and Message
+                    const name = row["Name"]; // Adjust the field name according to your CSV
+                    const message = row[
+                        "Message"]; // Adjust the field name according to your CSV
+                    if (name && message) {
+                        html += `
+                            <div class="comment">
+                                <div class="comment-name">${name}</div>
+                                <div class="comment-message">${message}</div>
+                            </div>
+                        `;
+                    }
+                });
+
+                $('#form-container').html(html);
+            },
+        });
+        // End of Fetch data and show as csv
+
     });
 </script>
 <style>
