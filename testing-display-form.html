@@ -17,11 +17,12 @@
 
 <body>
     <h3>Load Google Sheet Data as CSV with jQuery</h3>
+    <div id="data-wrapper"></div>
 </body>
 
 <script>
     // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
-    const sheetId = "1L_c0OjjnFq8xARjuXqGKdnD4xy_p5Uix9ith_LZpz7o";
+    const sheetId = "1JoTO6k9f-EQIxxiXCOAzY0pMG-SQz6YrLCW_6zLa9yw";
     // sheetName is the name of the TAB in your spreadsheet (default is "Sheet1")
     const sheetName = encodeURIComponent("Sheet1");
     const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
@@ -36,6 +37,7 @@
             console.log(data);
             // 'data' is an Array of Objects
             // ADD YOUR CODE HERE
+            $('#data-wrapper').html(data);
         },
     });
 </script>
