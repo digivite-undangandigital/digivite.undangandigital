@@ -2,7 +2,7 @@
 
 
 <div class="container">
-    <h3>--Testing Input Form--6</h3>
+    <h3>--Testing Input Form--7</h3>
     <form id="my-form" method="POST"
         action="https://script.google.com/macros/s/AKfycbzBRgd-AXrj3FNqqXFL0_Edy0z7M_351zz-a1OfZeZvqeGEp_8XuplhrPRpfYus24BL/exec">
         <input name="Email" type="email" placeholder="Email" required>
@@ -21,7 +21,7 @@
         <button type="submit">Send</button>
     </form>
 
-    <h3>--Testing Input Form--6</h3>
+    <h3>--Testing Input Form--7</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -35,6 +35,18 @@
 </div>
 <script>
     $(document).ready(function () {
+        // Fetch initial data on page load
+        $.ajax({
+            type: 'GET',
+            url: 'https://script.google.com/macros/s/AKfycbzBRgd-AXrj3FNqqXFL0_Edy0z7M_351zz-a1OfZeZvqeGEp_8XuplhrPRpfYus24BL/exec',
+            success: function (response) {
+                updateEntries(response.data);
+            },
+            error: function () {
+                console.error("Error fetching initial data.");
+            }
+        });
+
         $('#my-form').submit(function (e) {
             e.preventDefault();
             var form = $(this);
