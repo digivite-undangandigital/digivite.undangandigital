@@ -9,6 +9,8 @@
         <input name="Name" type="text" placeholder="Name" required>
         <button type="submit">Send</button>
     </form>
+
+    <h3>--Testing Input Form--</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -21,65 +23,41 @@
 
 </div>
 <script>
-    //     window.addEventListener("load", function() {
-    //   const form = document.getElementById('my-form');
-    //   const box = document.getElementById('kotak-notif');
-    //   form.addEventListener("submit", function(e) {
-    //     e.preventDefault();
-    //     const data = new FormData(form);
-    //     const action = e.target.action;
-    //     fetch(action, {
-    //       method: 'POST',
-    //       body: data,
-    //     })
-    //     .then(() => {
-    //       alert("Success!");
-    //     })
-    //   });
+    // $(document).ready(function () {
+    //     $('#my-form').submit(function (e) {
+    //         e.preventDefault();
+    //         var form = $(this);
+    //         var formData = form.serialize();
+    //         var action = form.attr('action');
+
+    //         $.ajax({
+    //             type: 'POST',
+    //             url: action,
+    //             data: formData,
+    //             success: function (response) {
+    //                 showNotification("Success!", "success");
+    //                 console.log(response);
+    //             },
+    //             error: function () {
+    //                 showNotification("Error submitting the form. Please try again later.",
+    //                     "error");
+    //             }
+    //         });
+
+    //     });
+
+    //     function showNotification(message, type) {
+    //         var notification = $('<div class="notification"></div>');
+    //         notification.text(message);
+    //         notification.addClass(type);
+
+    //         $('#kotak-notif').append(notification);
+
+    //         setTimeout(function () {
+    //             notification.remove();
+    //         }, 5000); // Adjust timeout as needed
+    //     }
     // });
-
-    $(document).ready(function () {
-        $('#my-form').submit(function (e) {
-            e.preventDefault();
-            var form = $(this);
-            var formData = form.serialize();
-            var action = form.attr('action');
-
-            $.ajax({
-                type: 'POST',
-                url: action,
-                data: formData,
-                success: function (response) {
-                    showNotification("Success!", "success");
-                    console.log(response);
-                    // Assuming response is JSON and contains a 'success' field
-                    // if (response && response.success) {
-                    //   showNotification("Success!", "success");
-                    // } 
-                    // else {
-                    //   showNotification("Submission failed. Please try again.", "error");
-                    // }
-                },
-                error: function () {
-                    showNotification("Error submitting the form. Please try again later.",
-                        "error");
-                }
-            });
-
-        });
-
-        function showNotification(message, type) {
-            var notification = $('<div class="notification"></div>');
-            notification.text(message);
-            notification.addClass(type);
-
-            $('#kotak-notif').append(notification);
-
-            setTimeout(function () {
-                notification.remove();
-            }, 5000); // Adjust timeout as needed
-        }
-    });
 </script>
 <style>
     .container {
