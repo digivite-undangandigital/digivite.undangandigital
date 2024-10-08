@@ -6,7 +6,7 @@
 
 
 <div class="container">
-    <h3>--Testing Input Form--12</h3>
+    <h3>--Testing Input Form--13</h3>
     <form id="my-form" method="POST"
         action="https://script.google.com/macros/s/AKfycbz52b-BEkatWf45nxB4hmKjByFHiPCbb1c46BYbBk5yESi6a05YWqcosuiYoUGukbLb/exec">
         <input name="Email" type="email" placeholder="Email" required>
@@ -25,7 +25,7 @@
         <button type="submit">Send</button>
     </form>
 
-    <h3>--Testing Input Form--12</h3>
+    <h3>--Testing Input Form--13</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -70,6 +70,7 @@
             notification.addClass(type);
 
             $('#kotak-notif').append(notification);
+            fetchData();
 
             setTimeout(function () {
                 notification.remove();
@@ -78,44 +79,47 @@
         // End of Kirim Data ke Sheet
 
         // Fetch data and show as csv
-        // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
-        const sheetId = "1L_c0OjjnFq8xARjuXqGKdnD4xy_p5Uix9ith_LZpz7o";
-        // sheetName is the name of the TAB in your spreadsheet (default is "Sheet1")
-        const sheetName = encodeURIComponent("Sheet1");
-        const sheetURL =
-            `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
+        function fetchData() {
+            // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
+            const sheetId = "1L_c0OjjnFq8xARjuXqGKdnD4xy_p5Uix9ith_LZpz7o";
+            // sheetName is the name of the TAB in your spreadsheet (default is "Sheet1")
+            const sheetName = encodeURIComponent("Sheet1");
+            const sheetURL =
+                `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
 
-        $.ajax({
-            type: "GET",
-            url: sheetURL,
-            dataType: "text",
-            success: function (response) {
-                // var data = $.csv.toArrays(response);
-                var data = $.csv.toObjects(response);
-                console.log(data);
-                // 'data' is an Array of Objects
-                // ADD YOUR CODE HERE
+            $.ajax({
+                type: "GET",
+                url: sheetURL,
+                dataType: "text",
+                success: function (response) {
+                    // var data = $.csv.toArrays(response);
+                    var data = $.csv.toObjects(response);
+                    console.log(data);
+                    // 'data' is an Array of Objects
+                    // ADD YOUR CODE HERE
 
-                // Build comment display
-                let html = '';
-                data.reverse().forEach(row => {
-                    // Extract Name and Message
-                    const name = row["Name"]; // Adjust the field name according to your CSV
-                    const message = row[
-                        "Message"]; // Adjust the field name according to your CSV
-                    if (name && message) {
-                        html += `
+                    // Build comment display
+                    let html = '';
+                    data.reverse().forEach(row => {
+                        // Extract Name and Message
+                        const name = row[
+                            "Name"]; // Adjust the field name according to your CSV
+                        const message = row[
+                            "Message"]; // Adjust the field name according to your CSV
+                        if (name && message) {
+                            html += `
                             <div class="comment">
                                 <div class="comment-name">${name}</div>
                                 <div class="comment-message">${message}</div>
                             </div>
                         `;
-                    }
-                });
+                        }
+                    });
 
-                $('#form-container').html(html);
-            },
-        });
+                    $('#form-container').html(html);
+                },
+            });
+        }
         // End of Fetch data and show as csv
 
     });
