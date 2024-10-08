@@ -10,7 +10,7 @@
         <button type="submit">Send</button>
     </form>
 
-    <h3>--Testing Input Form--2</h3>
+    <h3>--Testing Input Form--3</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -23,41 +23,41 @@
 
 </div>
 <script>
-    // $(document).ready(function () {
-    //     $('#my-form').submit(function (e) {
-    //         e.preventDefault();
-    //         var form = $(this);
-    //         var formData = form.serialize();
-    //         var action = form.attr('action');
+    $(document).ready(function () {
+        $('#my-form').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var formData = form.serialize();
+            var action = form.attr('action');
 
-    //         $.ajax({
-    //             type: 'POST',
-    //             url: action,
-    //             data: formData,
-    //             success: function (response) {
-    //                 showNotification("Success!", "success");
-    //                 console.log(response);
-    //             },
-    //             error: function () {
-    //                 showNotification("Error submitting the form. Please try again later.",
-    //                     "error");
-    //             }
-    //         });
+            $.ajax({
+                type: 'POST',
+                url: action,
+                data: formData,
+                success: function (response) {
+                    showNotification("Success!", "success");
+                    console.log(response);
+                },
+                error: function () {
+                    showNotification("Error submitting the form. Please try again later.",
+                        "error");
+                }
+            });
 
-    //     });
+        });
 
-    //     function showNotification(message, type) {
-    //         var notification = $('<div class="notification"></div>');
-    //         notification.text(message);
-    //         notification.addClass(type);
+        function showNotification(message, type) {
+            var notification = $('<div class="notification"></div>');
+            notification.text(message);
+            notification.addClass(type);
 
-    //         $('#kotak-notif').append(notification);
+            $('#kotak-notif').append(notification);
 
-    //         setTimeout(function () {
-    //             notification.remove();
-    //         }, 5000); // Adjust timeout as needed
-    //     }
-    // });
+            setTimeout(function () {
+                notification.remove();
+            }, 5000); // Adjust timeout as needed
+        }
+    });
 </script>
 <style>
     .container {
