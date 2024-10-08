@@ -37,7 +37,24 @@
             console.log(data);
             // 'data' is an Array of Objects
             // ADD YOUR CODE HERE
-            $('#data-wrapper').html(data);
+
+            // Build comment display
+            let html = '';
+            data.forEach(row => {
+                // Extract Name and Message
+                const name = row["Name"]; // Adjust the field name according to your CSV
+                const message = row["Message"]; // Adjust the field name according to your CSV
+                if (name && message) {
+                    html += `
+                            <div class="comment">
+                                <div class="comment-name">${name}</div>
+                                <div class="comment-message">${message}</div>
+                            </div>
+                        `;
+                }
+            });
+
+            $('#data-wrapper').html(html);
         },
     });
 </script>
