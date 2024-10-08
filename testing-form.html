@@ -1,87 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
 
-        form {
-            max-width: 400px;
-            margin: auto;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-        <input type="text" id="name" placeholder="Nama" required>
-        <input type="number" id="phone" placeholder="No HP" required>
-        <textarea id="message" rows="4" placeholder="Ucapan" required></textarea>
-        <button type="submit">Submit</button>
+<div class="container">
+    <form id="my-form" method="POST"
+        action="https://script.google.com/macros/s/AKfycbyLfTAYdZRRErL4HDw6kJYAG41kXDyw5RehFG8EN5_d4CN3-KRMfgVVHLTjqy-xRuakUw/exec">
+        <input name="Phone" type="phone" placeholder="Phone" required>
+        <input name="Nama" type="text" placeholder="Nama" required>
+        <button type="submit">Send</button>
     </form>
-    <div id="response"></div>
+    <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#contactForm').on('submit', function (event) {
-                event.preventDefault();
-                const name = $('#name').val();
-                const email = $('#phone').val();
-                const message = $('#message').val();
+    <div class="show-data-container">
+        <h3 class="data-sheet">Data dari Sheet</h3>
+        <div id="form-container">
+            <!-- Form and pagination controls will be dynamically generated here -->
+        </div>
+    </div>
 
-                $.ajax({
-                    url: 'https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbwDaLiKhQBmKq5G8s2lPsFW4scmqNgdsJ8zKvweZZWDAEBFVoqdC0X1kAyjPE11j3-3/exec/exec',
-                    type: 'POST',
-                    data: {
-                        name: name,
-                        email: email,
-                        message: message
-                    },
-                    success: function (response) {
-                        $('#response').text(response);
-                        $('#contactForm')[0].reset(); // Reset form after submission
-                    },
-                    error: function () {
-                        $('#response').text('Error submitting form.');
-                    }
-                });
+
+</div>
+<script>
+    //     window.addEventListener("load", function() {
+    //   const form = document.getElementById('my-form');
+    //   const box = document.getElementById('kotak-notif');
+    //   form.addEventListener("submit", function(e) {
+    //     e.preventDefault();
+    //     const data = new FormData(form);
+    //     const action = e.target.action;
+    //     fetch(action, {
+    //       method: 'POST',
+    //       body: data,
+    //     })
+    //     .then(() => {
+    //       alert("Success!");
+    //     })
+    //   });
+    // });
+
+    $(document).ready(function () {
+        $('#my-form').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var formData = form.serialize();
+            var action = form.attr('action');
+
+            $.ajax({
+                type: 'POST',
+                url: action,
+                data: formData,
+                success: function (response) {
+                    showNotification("Success!", "success");
+                    console.log(response);
+                    // Assuming response is JSON and contains a 'success' field
+                    // if (response && response.success) {
+                    //   showNotification("Success!", "success");
+                    // } 
+                    // else {
+                    //   showNotification("Submission failed. Please try again.", "error");
+                    // }
+                },
+                error: function () {
+                    showNotification("Error submitting the form. Please try again later.",
+                        "error");
+                }
             });
+
         });
-    </script>
 
-</body>
+        function showNotification(message, type) {
+            var notification = $('<div class="notification"></div>');
+            notification.text(message);
+            notification.addClass(type);
 
-</html>
+            $('#kotak-notif').append(notification);
+
+            setTimeout(function () {
+                notification.remove();
+            }, 5000); // Adjust timeout as needed
+        }
+    });
+</script>
+<style>
+    .container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #my-form {
+        display: grid;
+        gap: 10px;
+    }
+
+    #my-form input,
+    #my-form button {
+        height: 52px;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
+
+    .success-notification {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .error-notification {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
