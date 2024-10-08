@@ -6,7 +6,7 @@
 
 
 <div class="container">
-    <h3>--Testing Input Form--15</h3>
+    <h3>--Testing Input Form--16</h3>
     <form id="my-form" method="POST"
         action="https://script.google.com/macros/s/AKfycbz52b-BEkatWf45nxB4hmKjByFHiPCbb1c46BYbBk5yESi6a05YWqcosuiYoUGukbLb/exec">
         <input name="Email" type="email" placeholder="Email" required>
@@ -25,9 +25,9 @@
         <button type="submit">Send</button>
     </form>
 
-    <div id="thanks-msg"></div>
+    <h2 id="thanks-msg"></h2>
 
-    <h3>--Testing Input Form--15</h3>
+    <h3>--Testing Input Form--16</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -74,6 +74,7 @@
 
             $('#kotak-notif').append(notification).remove('#my-form');
             fetchData();
+            $('#my-form').remove();
             $('#thanks-msg').append("Terima kasih atas ucapannya!");
 
             setTimeout(function () {
