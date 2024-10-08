@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Nama" required>
+        <input type="number" id="phone" placeholder="No HP" required>
+        <textarea id="message" rows="4" placeholder="Ucapan" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#contactForm').on('submit', function (event) {
+                event.preventDefault();
+                const name = $('#name').val();
+                const email = $('#phone').val();
+                const message = $('#message').val();
+
+                $.ajax({
+                    url: 'https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbwDaLiKhQBmKq5G8s2lPsFW4scmqNgdsJ8zKvweZZWDAEBFVoqdC0X1kAyjPE11j3-3/exec/exec',
+                    type: 'POST',
+                    data: {
+                        name: name,
+                        email: email,
+                        message: message
+                    },
+                    success: function (response) {
+                        $('#response').text(response);
+                        $('#contactForm')[0].reset(); // Reset form after submission
+                    },
+                    error: function () {
+                        $('#response').text('Error submitting form.');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
