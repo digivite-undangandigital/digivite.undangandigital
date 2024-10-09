@@ -6,7 +6,10 @@
 
 
 <div class="container">
-    <h3>--Testing Input Form--16</h3>
+    <h3>--Testing Input Form--17</h3>
+    <div class="nama-tamu">Nama Tamu :
+        <h4 id="namaTamuDigivite"></h4>
+    </div>
     <form id="my-form" method="POST"
         action="https://script.google.com/macros/s/AKfycbz52b-BEkatWf45nxB4hmKjByFHiPCbb1c46BYbBk5yESi6a05YWqcosuiYoUGukbLb/exec">
         <input name="Email" type="email" placeholder="Email" required>
@@ -27,7 +30,7 @@
 
     <h2 id="thanks-msg"></h2>
 
-    <h3>--Testing Input Form--16</h3>
+    <h3>--Testing Input Form--17</h3>
     <div class="succes-notif" id="kotak-notif">Pesan : </div>
 
     <div class="show-data-container">
@@ -127,6 +130,19 @@
         }
         // End of Fetch data and show as csv
 
+
+        // URL Params
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name'); // Get the 'name' parameter
+
+        // Display the name in the div
+        if (name) {
+            $('#namaTamuDigivite').text(decodeURIComponent(name));
+        } else {
+            $('#namaTamuDigivite').text('No name provided.');
+        }
+        // End of URL Params
     });
 </script>
 <style>
