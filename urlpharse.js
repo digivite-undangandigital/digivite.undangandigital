@@ -1,11 +1,10 @@
-$(document).ready(function() {
-    // Get the current URL from the address bar
-    const url = window.location.href;
+   // Get the URL parameters
+   const urlParams = new URLSearchParams(window.location.search);
+   const name = urlParams.get('name'); // Get the 'name' parameter
 
-    // Extract the name part from the URL
-    const namePart = url.split('/').pop(); // Gets 'First%20Second%20Name'
-    const decodedName = decodeURIComponent(namePart); // Decodes '%20' to space
-
-    // Display the name in the div
-    $('#namaTamuDigivite').text(decodedName);
-});
+   // Display the name in the div
+   if (name) {
+       $('#namaTamuDigivite').text(decodeURIComponent(name));
+   } else {
+       $('#namaTamuDigivite').text('No name provided.');
+   }
