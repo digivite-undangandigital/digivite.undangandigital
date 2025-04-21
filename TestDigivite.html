@@ -1,0 +1,181 @@
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"
+    integrity="sha512-Y8iWYJDo6HiTo5xtml1g4QqHtl/PO1w+dmUpQfQSOTqKNsMhExfyPN2ncNAe9JuJUSKzwK/b6oaNPop4MXzkwg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<div class="container">
+    <h3>--Testing Input Form--17</h3>
+    <h1 class="nama-tamu">Nama Tamu :
+        <span id="namaTamuDigivite"></span>
+    </h1>
+    <form id="my-form" method="POST"
+        action="https://script.google.com/macros/s/AKfycbz52b-BEkatWf45nxB4hmKjByFHiPCbb1c46BYbBk5yESi6a05YWqcosuiYoUGukbLb/exec">
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Name" type="text" placeholder="Name" required>
+        <input name="Phone" type="number" placeholder="Phone" required>
+        <input name="Message" type="text" placeholder="Message" required>
+        <fieldset>
+            <legend>Attendance:</legend>
+            <label>
+                <input type="radio" name="Attendance" value="Yes" required> Yes
+            </label>
+            <label>
+                <input type="radio" name="Attendance" value="No" required> No
+            </label>
+        </fieldset>
+        <button type="submit">Send</button>
+    </form>
+
+    <h2 id="thanks-msg"></h2>
+
+    <h3>--Testing Input Form--17</h3>
+    <div class="succes-notif" id="kotak-notif">Pesan : </div>
+
+    <div class="show-data-container">
+        <h3 class="data-sheet">Data dari Sheet</h3>
+        <div id="form-container">
+            <!-- Form and pagination controls will be dynamically generated here -->
+        </div>
+    </div>
+
+
+</div>
+<script>
+    $(document).ready(function () {
+        fetchData();
+
+        // Kirim Data ke Sheet
+        $('#my-form').submit(function (e) {
+            e.preventDefault();
+            var form = $(this);
+            var formData = form.serialize();
+            var action = form.attr('action');
+
+            $.ajax({
+                type: 'POST',
+                url: action,
+                data: formData,
+                success: function (response) {
+                    showNotification("Success!", "success");
+                    console.log(response);
+                },
+                error: function () {
+                    showNotification("Error submitting the form. Please try again later.",
+                        "error");
+                }
+            });
+
+        });
+
+        // Buat notif submit success or not
+        function showNotification(message, type) {
+            var notification = $('<div class="notification"></div>');
+            notification.text(message);
+            notification.addClass(type);
+
+            $('#kotak-notif').append(notification).remove('#my-form');
+            fetchData();
+            $('#my-form').remove();
+            $('#thanks-msg').append("Terima kasih atas ucapannya!");
+
+            setTimeout(function () {
+                notification.remove();
+            }, 5000); // Adjust timeout as needed
+        }
+        // End of Kirim Data ke Sheet
+
+        // Fetch data and show as csv
+        function fetchData() {
+            // sheetID you can find in the URL of your spreadsheet after "spreadsheet/d/"
+            const sheetId = "11FvxNgjpwxChuG6UX-0gXXLwrjwndP8dmf8MGyVl-cw";
+            // sheetName is the name of the TAB in your spreadsheet (default is "Sheet1")
+            const sheetName = encodeURIComponent("Sheet1");
+            const sheetURL =
+                `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&sheet=${sheetName}`;
+
+            $.ajax({
+                type: "GET",
+                url: sheetURL,
+                dataType: "text",
+                success: function (response) {
+                    // var data = $.csv.toArrays(response);
+                    var data = $.csv.toObjects(response);
+                    console.log(data);
+                    // 'data' is an Array of Objects
+                    // ADD YOUR CODE HERE
+
+                    // Build comment display
+                    let html = '';
+                    data.reverse().forEach(row => {
+                        // Extract Name and Message
+                        const name = row[
+                            "Name"]; // Adjust the field name according to your CSV
+                        const message = row[
+                            "Message"]; // Adjust the field name according to your CSV
+                        if (name && message) {
+                            html += `
+                            <div class="comment">
+                                <div class="comment-name">${name}</div>
+                                <div class="comment-message">${message}</div>
+                            </div>
+                        `;
+                        }
+                    });
+
+                    $('#form-container').html(html);
+                },
+            });
+        }
+        // End of Fetch data and show as csv
+
+
+        // URL Params
+        // Get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name'); // Get the 'name' parameter
+
+        // Display the name in the div
+        if (name) {
+            $('#namaTamuDigivite').text(decodeURIComponent(name));
+        } else {
+            $('#namaTamuDigivite').text('No name provided.');
+        }
+        // End of URL Params
+    });
+</script>
+<style>
+    .container {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #my-form {
+        display: grid;
+        gap: 10px;
+    }
+
+    #my-form input,
+    #my-form button {
+        height: 52px;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
+
+    .success-notification {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .error-notification {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+</style>
